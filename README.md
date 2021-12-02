@@ -2,7 +2,7 @@
 Dependencies:
 > ttf-droid<br>
 > ttf-font-awesome<br>
-> playerctl
+> playerctl<br>
 > Arch Linux (For the package count in the top bar)
 
 # Install
