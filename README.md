@@ -3,6 +3,8 @@ Dependencies:
 > ttf-droid<br>
 > ttf-font-awesome<br>
 > playerctl<br>
+> picom or compton<br>
+> nitrogen (For wallpaper)<br>
 > Arch Linux (For the package count in the top bar)
 
 # Install
