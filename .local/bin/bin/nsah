@@ -1,0 +1,12 @@
+if [ "$EUID" -ne 0 ]
+then
+    cd /opt
+    sudo git clone $1
+    latest_file=$(ls -td -- */ | head -n 1)
+    sudo chown $USER:users $latest_file 
+    cd $latest_file
+    makepkg --skippgpcheck -si
+else
+    echo "Please do not run this script as a superuser!"
+    exit
+fi
