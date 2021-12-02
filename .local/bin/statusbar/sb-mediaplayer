@@ -6,7 +6,13 @@ status="$(playerctl status)"
 out=""
 
 if [ "$status" = "Playing" ]; then
-    out=" $playername: $artist - $title"
+    if [ "$playername" = "spotify" ]; then
+        out=" $artist - $title"
+    elif [ "$playername" = "firefox" ]; then
+        out=" $artist - $title"
+    else
+        out=" $artist - $title"
+    fi
 else
     echo "" && exit
 fi
