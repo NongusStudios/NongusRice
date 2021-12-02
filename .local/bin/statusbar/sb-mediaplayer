@@ -1,0 +1,14 @@
+playername="$(playerctl metadata --format '{{playerName}}')"
+artist="$(playerctl metadata --format '{{artist}}')"
+title="$(playerctl metadata --format '{{title}}')"
+status="$(playerctl status)"
+
+out=""
+
+if [ "$status" = "Playing" ]; then
+    out=" $playername: $artist - $title"
+else
+    echo "" && exit
+fi
+
+echo "$out"
