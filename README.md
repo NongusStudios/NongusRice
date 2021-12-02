@@ -1,4 +1,7 @@
 # NongusRice
+
+![Alt text](ngsdwm.png)
+
 Dependencies:
 > ttf-droid<br>
 > ttf-font-awesome<br>

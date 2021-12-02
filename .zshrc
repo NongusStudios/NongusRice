@@ -12,7 +12,7 @@ usb=/mnt/usb
 
 # aliases
 alias ls="ls --color"
+alias pacmanclean="sudo pacman -Qtdq | sudo pacman -Rns -"
 
 export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/statusbar
-
-neofetch
+#neofetch
