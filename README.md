@@ -1,2 +1,5 @@
 # NongusRice
-My dwm config and scripts.
+Dependencies:
+> ttf-droid<br>
+> ttf-font-awesome<br>
+> playerctl
