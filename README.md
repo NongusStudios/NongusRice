@@ -1,8 +1,8 @@
 # NongusRice
 
-![Alt text](ngsdwm.png)
+![Alt text](ngsdwm.png "My Desktop")
 
-Dependencies:
+# Dependencies
 > ttf-droid<br>
 > ttf-font-awesome<br>
 > playerctl<br>
