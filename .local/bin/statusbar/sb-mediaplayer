@@ -7,11 +7,23 @@ out=""
 
 if [ "$status" = "Playing" ]; then
     if [ "$playername" = "spotify" ]; then
-        out=" $artist - $title"
+        if [ "$artist" = "" ]; then
+            out=" $title" 
+        else
+            out=" $artist - $title"
+        fi
     elif [ "$playername" = "firefox" ]; then
-        out=" $artist - $title"
+        if [ "$artist" = "" ]; then
+            out=" $title"
+        else
+            out=" $artist - $title"
+        fi
     else
-        out=" $artist - $title"
+        if [ "$artist" = "" ]; then
+            out=" $title"
+        else
+            out=" $artist - $title"
+        fi
     fi
 else
     echo "" && exit
