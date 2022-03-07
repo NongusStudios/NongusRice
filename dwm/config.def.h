@@ -1,26 +1,54 @@
 /* See LICENSE file for copyright and license details. */
 
+enum ColorCodes {
+	BLACK=0,
+	RED,
+	GREEN,
+	YELLOW,
+	BLUE,
+	MAGENTA,
+	CYAN,
+	WHITE,
+	BRBLACK,
+	BRRED,
+	BRGREEN,
+	BRYELLOW,
+	BRBLUE,
+	BRMAGENTA,
+	BRCYAN,
+	BRWHITE
+};
+static const char* const colorPalette[] = {
+  "#282c34", /* 0: black */
+  "#e06c75", /* 1: red */
+  "#98c379", /* 2: green */
+  "#d19a66", /* 3: yellow */
+  "#61afef", /* 4: blue */
+  "#c678dd", /* 5: magenta */
+  "#56b6c2", /* 6: cyan */
+  "#abb2bf", /* 7: white */
+  "#5c6370", /* 8: brblack */
+  "#e06c75", /* 9: brred */
+  "#98c379", /* 10: brgreen */
+  "#d19a66", /* 11: bryellow */
+  "#61afef", /* 12: brblue */
+  "#c678dd", /* 13: brmagenta */
+  "#56b6c2", /* 14: brcyan */
+  "#ffffff"  /* 15: brwhite */
+};
+
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 1;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Droid Sans Mono:size=12", "fontawesome:size=12" };
-static const char dmenufont[]       = "Droid Sans Mono:size=12";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-static const char col_bg[]          = "#282828";
-static const char col_txt[]         = "#a89984";
-static const char col_acc[]         = "#98971a";//"#fc0868";
-static const char col_acc2[]        = "#d79921";//"#68fc08";
+static const char dmenufont[]       =   "Droid Sans Mono:size=12";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_txt,   col_bg,    col_gray2 },
-	[SchemeSel]  = { col_bg,    col_acc,   col_acc2  },
+	/*               fg                     bg                      border   */
+	[SchemeNorm] = { colorPalette[WHITE],   colorPalette[BLACK],    colorPalette[BLACK] },
+	[SchemeSel]  = { colorPalette[BLACK],   colorPalette[BLUE],     colorPalette[GREEN] },
 };
 
 /* tagging */
@@ -64,7 +92,9 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_txt, "-sb", col_acc2, "-sf", col_bg, NULL };
+static const char *dmenucmd[] = { 
+	"dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", colorPalette[BLACK], "-nf", colorPalette[WHITE], "-sb", colorPalette[BLUE], "-sf", colorPalette[BLACK], NULL
+};
 static const char *termcmd[]  = { "st",    NULL };
 static const char *bravecmd[] = { "brave", NULL };
 
