@@ -18,6 +18,12 @@ if [ "$status" = "Playing" ]; then
         else
             out=" $artist - $title"
         fi
+    elif [ "$playername" = "chromium" ]; then
+        if [ "$artist" = "" ]; then
+            out=" $title"
+        else
+            out=" $artist - $title"
+        fi
     else
         if [ "$artist" = "" ]; then
             out=" $title"

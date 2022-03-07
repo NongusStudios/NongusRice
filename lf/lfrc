@@ -1,0 +1,12 @@
+set shell bash
+set shellopts '-eu'
+set ifs "\n"
+set scrolloff 10
+set icons
+set period 1
+set ratios 1:2:3
+
+map o $vim $f
+map D $rm -rf $f
+map - $sxiv $f
+map + $mpv $f
