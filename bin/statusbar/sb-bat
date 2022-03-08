@@ -1,0 +1,20 @@
+status=$(cat /sys/class/power_supply/BAT1/status)
+capacity=$(cat /sys/class/power_supply/BAT1/capacity)
+
+icon=""
+
+if [ "$status" = "Charging" ]; then
+    icon = ""
+else
+    if [ "$capacity" -gt "75" ]; then
+        echo " $capacity%"
+    elif [ "$capacity" -gt "50" ]; then
+         echo " $capacity%"
+    elif [ "$capacity" -gt "25" ]; then
+         echo " $capacity%"
+    elif [ "$capacity" -gt "5" ]; then
+        echo " $capacity%"
+    else
+        echo " $capacity%"            
+    fi
+fi

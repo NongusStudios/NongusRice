@@ -7,7 +7,8 @@ static const Block blocks[] = {
     {" ",   "pacman -Q | wc -l",                                    5,              0}, 
     {"",     "sb-mediaplayer",                                       1,              1},
     {"",     "sb-volume",                                            1,              2},
-	{"",     "date '+%I:%M %a, %d %b '",					         20,   	         0},
+    /*{"",     "sb-bat",                                               5,              0},*/
+    {"",     "date '+%I:%M %a, %d %b '",					         20,   	         0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
