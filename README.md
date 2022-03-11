@@ -3,10 +3,13 @@
 ![Alt text](ngsdwm.png "My Desktop")
 
 # Dependencies
+> xorg<br>
+> xorg-xinit<br>
 > ttf-droid<br>
 > ttf-font-awesome<br>
 > dmenu<br>
 > playerctl<br>
+> pamixer<br>
 > picom or compton<br>
 > nitrogen (For wallpaper)<br>
 > dunst<br>
