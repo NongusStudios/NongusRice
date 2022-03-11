@@ -6,7 +6,7 @@ set icons
 set period 1
 set ratios 1:2:3
 
-map o $vim $f
+map o $nvim $f
 map D $rm -rf $f
 map - $sxiv $f
 map + $mpv $f
