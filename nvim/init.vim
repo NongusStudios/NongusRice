@@ -45,6 +45,7 @@ call plug#begin()
     Plug 'jiangmiao/auto-pairs'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'wfxr/minimap.vim'
 call plug#end()
 
 " onedark
@@ -77,6 +78,13 @@ lua << EOF
     }
 EOF
 
+" Minimap
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
+let g:minimap_highlight_range = 1
+
+
 " COC
 let g:coc_default_semantic_highlight_groups = 1
 let g:coc_global_config="$HOME/.config/nvim/coc-settings.json"
@@ -98,4 +106,3 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
-

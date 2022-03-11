@@ -9,6 +9,9 @@
 > playerctl<br>
 > picom or compton<br>
 > nitrogen (For wallpaper)<br>
+> dunst<br>
+> lf
+> neovim
 > Arch Linux (For the package count in the top bar)
 
 # Install
