@@ -10,8 +10,8 @@
 > picom or compton<br>
 > nitrogen (For wallpaper)<br>
 > dunst<br>
-> lf
-> neovim
+> lf<br>
+> neovim<br>
 > Arch Linux (For the package count in the top bar)
 
 # Install
