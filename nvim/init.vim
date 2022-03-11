@@ -11,10 +11,10 @@ set smartcase
 set noswapfile
 set nobackup
 set nowritebackup
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set encoding=utf-8
 set laststatus=2
 set noshowmode
@@ -23,15 +23,19 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 set hidden
-set signcolumn=yes
+set guicursor=i:block
 "set spell spelllang=en_us
+
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 if has("termguicolors")
     set termguicolors
 endif
-
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 call plug#begin()
     Plug 'joshdick/onedark.vim'
@@ -39,9 +43,8 @@ call plug#begin()
     Plug 'itchyny/lightline.vim'
     Plug 'preservim/nerdtree'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'frazrepo/vim-rainbow'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'jackguo380/vim-lsp-cxx-highlight'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " onedark
@@ -56,10 +59,27 @@ let g:lightline = { 'colorscheme' : 'onedark' }
 " NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
 
+" Tree sitter
+lua << EOF
+    require'nvim-treesitter.configs'.setup {
+        ensure_installed = "maintained",
+
+        sync_install = false,
+
+
+        highlight = {
+            enable = true,
+
+            disable = {},
+
+            additional_vim_regex_highlighting = false,
+        },
+    }
+EOF
+
 " COC
 let g:coc_default_semantic_highlight_groups = 1
-let g:coc_global_config="$HOME/.vim/coc-settings.json"
-let g:lsp_cxx_hl_use_text_props = 1
+let g:coc_global_config="$HOME/.config/nvim/coc-settings.json"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
