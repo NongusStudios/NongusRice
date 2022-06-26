@@ -5,7 +5,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set nu
+set nu rnu
 set nowrap
 set smartcase
 set noswapfile
@@ -38,20 +38,20 @@ if has("termguicolors")
 endif
 
 call plug#begin()
+    Plug 'morhetz/gruvbox'
     Plug 'joshdick/onedark.vim'
     Plug 'hallzy/lightline-onedark'
     Plug 'itchyny/lightline.vim'
     Plug 'preservim/nerdtree'
     Plug 'jiangmiao/auto-pairs'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'wfxr/minimap.vim'
 call plug#end()
 
 " onedark
 set background=dark
-colorscheme onedark
-let g:lightline = { 'colorscheme' : 'onedark' }
+colorscheme gruvbox
+let g:lightline = { 'colorscheme' : 'gruvbox' }
 
 " Make Background Transparent
 "hi Normal guibg=NONE ctermbg=NONE
@@ -60,30 +60,11 @@ let g:lightline = { 'colorscheme' : 'onedark' }
 " NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
 
-" Tree sitter
-lua << EOF
-    require'nvim-treesitter.configs'.setup {
-        ensure_installed = "maintained",
-
-        sync_install = false,
-
-
-        highlight = {
-            enable = true,
-
-            disable = {},
-
-            additional_vim_regex_highlighting = false,
-        },
-    }
-EOF
-
 " Minimap
 let g:minimap_width = 10
 let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
 let g:minimap_highlight_range = 1
-
 
 " COC
 let g:coc_default_semantic_highlight_groups = 1

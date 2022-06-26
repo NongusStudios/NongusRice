@@ -19,22 +19,22 @@ enum ColorCodes {
 	BRWHITE
 };
 static const char* const colorPalette[] = {
-  "#282c34", /* 0: black */
-  "#e06c75", /* 1: red */
-  "#98c379", /* 2: green */
-  "#d19a66", /* 3: yellow */
-  "#61afef", /* 4: blue */
-  "#c678dd", /* 5: magenta */
-  "#56b6c2", /* 6: cyan */
-  "#abb2bf", /* 7: white */
-  "#5c6370", /* 8: brblack */
-  "#e06c75", /* 9: brred */
-  "#98c379", /* 10: brgreen */
-  "#d19a66", /* 11: bryellow */
-  "#61afef", /* 12: brblue */
-  "#c678dd", /* 13: brmagenta */
-  "#56b6c2", /* 14: brcyan */
-  "#ffffff"  /* 15: brwhite */
+  "#282828", /* 0:  black */
+  "#cc241d", /* 1:  red */
+  "#98971a", /* 2:  green */
+  "#d79921", /* 3:  yellow */
+  "#458588", /* 4:  blue */
+  "#b16286", /* 5:  magenta */
+  "#689d6a", /* 6:  cyan */
+  "#a89984", /* 7:  white */
+  "#928374", /* 8:  brblack */
+  "#fb4934", /* 9:  brred */
+  "#b8bb26", /* 10: brgreen */
+  "#fabd2f", /* 11: bryellow */
+  "#83a598", /* 12: brblue */
+  "#d3869b", /* 13: brmagenta */
+  "#8ec07c", /* 14: brcyan */
+  "#ebdbb2", /* 15: brwhite */
 };
 
 /* appearance */
@@ -43,8 +43,8 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 1;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Droid Sans Mono:size=12", "fontawesome:size=12" };
-static const char dmenufont[]       =   "Droid Sans Mono:size=12";
+static const char *fonts[]          = { "Cascadia Code:size=12", "fontawesome:size=12" };
+static const char dmenufont[]       =   "Cascadia Code:size=12";
 static const char *colors[][3]      = {
 	/*               fg                     bg                      border   */
 	[SchemeNorm] = { colorPalette[WHITE],   colorPalette[BLACK],    colorPalette[BLACK] },

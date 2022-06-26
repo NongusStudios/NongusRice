@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char* font = "Droid Sans Mono:pixelsize=16:antialias=true:autohint=true";
+static char* font = "Cascadia Code:pixelsize=16:antialias=true:autohint=true";
 static char* font2[] = {
   "fontawesome:pixelsize=16:antialias=true:autohint=true"
 };
@@ -99,23 +99,44 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 float alpha = 1.0f;
 
+// one dark
+//static const char *colorname[] = {
+//  "#282c34", /* 0: black */
+//  "#e06c75", /* 1: red */
+//  "#98c379", /* 2: green */
+//  "#d19a66", /* 3: yellow */
+//  "#61afef", /* 4: blue */
+//  "#c678dd", /* 5: magenta */
+//  "#56b6c2", /* 6: cyan */
+//  "#abb2bf", /* 7: white */
+//  "#5c6370", /* 8: brblack */
+//  "#e06c75", /* 9: brred */
+//  "#98c379", /* 10: brgreen */
+//  "#d19a66", /* 11: bryellow */
+//  "#61afef", /* 12: brblue */
+//  "#c678dd", /* 13: brmagenta */
+//  "#56b6c2", /* 14: brcyan */
+//  "#ffffff", /* 15: brwhite */
+//};
+
+
 static const char *colorname[] = {
-  "#282c34", /* 0: black */
-  "#e06c75", /* 1: red */
-  "#98c379", /* 2: green */
-  "#d19a66", /* 3: yellow */
-  "#61afef", /* 4: blue */
-  "#c678dd", /* 5: magenta */
-  "#56b6c2", /* 6: cyan */
-  "#abb2bf", /* 7: white */
-  "#5c6370", /* 8: brblack */
-  "#e06c75", /* 9: brred */
-  "#98c379", /* 10: brgreen */
-  "#d19a66", /* 11: bryellow */
-  "#61afef", /* 12: brblue */
-  "#c678dd", /* 13: brmagenta */
-  "#56b6c2", /* 14: brcyan */
-  "#ffffff", /* 15: brwhite */
+  "#282828", /* 0:  black */
+  "#cc241d", /* 1:  red */
+  "#98971a", /* 2:  green */
+  "#d79921", /* 3:  yellow */
+  "#458588", /* 4:  blue */
+  "#b16286", /* 5:  magenta */
+  "#689d6a", /* 6:  cyan */
+  "#a89984", /* 7:  white */
+  "#928374", /* 8:  brblack */
+  "#fb4934", /* 9:  brred */
+  "#b8bb26", /* 10: brgreen */
+  "#fabd2f", /* 11: bryellow */
+  "#83a598", /* 12: brblue */
+  "#d3869b", /* 13: brmagenta */
+  "#8ec07c", /* 14: brcyan */
+  "#ebdbb2", /* 15: brwhite */
 };
 
 
