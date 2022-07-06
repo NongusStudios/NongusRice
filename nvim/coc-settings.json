@@ -1,3 +1,11 @@
 {
-    "coc.preferences.semanticTokensHighlights": false
+   "languageserver": {
+        "clangd": {
+            "command": "clangd",
+            "args": ["--background-index", "-std=c99"],
+            "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+            "filetypes": ["c", "h"]
+        }
+       
+    }
 }

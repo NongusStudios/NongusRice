@@ -38,14 +38,12 @@ if has("termguicolors")
 endif
 
 call plug#begin()
+    Plug 'bfrg/vim-cpp-modern'
     Plug 'morhetz/gruvbox'
-    Plug 'joshdick/onedark.vim'
-    Plug 'hallzy/lightline-onedark'
     Plug 'itchyny/lightline.vim'
     Plug 'preservim/nerdtree'
     Plug 'jiangmiao/auto-pairs'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'wfxr/minimap.vim'
 call plug#end()
 
 " onedark
@@ -60,15 +58,8 @@ let g:lightline = { 'colorscheme' : 'gruvbox' }
 " NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
 
-" Minimap
-let g:minimap_width = 10
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
-let g:minimap_highlight_range = 1
-
 " COC
 let g:coc_default_semantic_highlight_groups = 1
-let g:coc_global_config="$HOME/.config/nvim/coc-settings.json"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
